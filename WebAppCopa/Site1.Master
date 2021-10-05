@@ -1,0 +1,49 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="WebAppCopa.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+        <link href="Content/toastr.css" rel="stylesheet" />
+        <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container" style="display: flex; justify-content: center;">
+                <div class="navbar-header">
+                    <!--<button type="button" class="navbar-toggler" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>-->
+                    <a class="navbar-brand" runat="server" href="~/" style="margin-right: 500px; color: #ff7700;">COPA</a>                    
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a runat="server" href="#">Links para páginas</a></li>
+                        <li><a href="ListarJogadores.aspx">Jogadores</a></li>
+                        <li><a href="ListarEstadio.aspx">Estádios</a></li>
+                    </ul>
+                </div>                
+            </div>
+        </div>
+        <div class="container body-content">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">                
+            </asp:ContentPlaceHolder>
+            <hr />
+            <footer style="display: flex; position: absolute; bottom: 0; justify-content: center;">
+                <p style="margin-left: 400px;"> &copy; <%: DateTime.Now.Year %> - Etec Horácio Augusto da Silveira</p>
+            </footer>
+        </div>
+        <script src="Scripts/jquery-3.3.1.min.js"></script>
+        <script src="Scripts/bootbox.min.js"></script>
+        <script src="Scripts/toastr.js"></script>
+        <script src="Scripts/bootstrap.min.js"></script>
+    </form>
+</body>
+</html>
